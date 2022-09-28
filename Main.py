@@ -1,12 +1,17 @@
 from typing import List
 
 def selectionSort(array, size) -> List[int]:
-  for i in range(0,size):
-    for j in range (i+1, size):
+  for i in range(size-1):
+    m=array[i]
+    p=i
+    for j in range (i, size):
+    
       if array[i]>array[j]:
-        temp=array[i]
-        array[i]=array[j]
-        array[j]=temp
+        m=array[j]
+        p=j
+    temp=array[i]
+    array[i]=array[j]
+    array[j]=temp
         
         
 # Do not change the following code
